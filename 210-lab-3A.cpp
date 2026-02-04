@@ -12,24 +12,23 @@ using namespace std;
 
 struct Restaurant {
     
-    string name;
-    int address;
-    double price;
-    double openhours;
-    double closedHours;
+    string name, address;
+    int capacity;
+    double price, openHours, closedHours;
+    
 
 };
 
-void restaurantInfo(const Restaurant& tempRest){
-    cout << "Enter the Restaurant name:" << tempRest.name << "\n";
-    cout << "Enter the address:" << tempRest.address << "\n";
-    cout << "Enter Open Hours:" << tempRest.openhours << "\n";
-    cout << "Enter Closed Hours:" << tempRest.closedHours << "\n";
-    cout << "Enter price of meal:" << tempRest.price << endl;
+// void restaurantInfo(const Restaurant& tempRest){
+//     cout << "Enter the Restaurant name:" << tempRest.name << "\n";
+//     cout << "Enter the address:" << tempRest.address << "\n";
+//     cout << "Enter Open Hours:" << tempRest.openhours << "\n";
+//     cout << "Enter Closed Hours:" << tempRest.closedHours << "\n";
+//     cout << "Enter price of meal:" << tempRest.price << endl;
 
-}
+// }
 
 int main() {
-
+    Restaurant food = {"Pear Bistro", "22 Pear Street", 60, 13.00, 7.00, 20.00};
     return 0;
 }
