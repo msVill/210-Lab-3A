@@ -7,7 +7,6 @@
 // MILESTONE 2: completed program w/the two working funcitons.
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -29,10 +28,9 @@ void restaurantInfo(const Restaurant& tempRest){
     cout << "Enter price of meal:" << tempRest.price << endl;
 
 }
-
 void 
 
 int main(){
 
     return 0;
-};
+}
