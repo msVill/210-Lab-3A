@@ -28,9 +28,8 @@ void restaurantInfo(const Restaurant& tempRest){
     cout << "Enter price of meal:" << tempRest.price << endl;
 
 }
-void 
 
-int main(){
+int main() {
 
     return 0;
 }
