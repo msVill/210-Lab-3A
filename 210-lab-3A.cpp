@@ -44,10 +44,8 @@ Restaurant restaurantInfo(){
     getline(cin, tempRestaurant.address);
     cout << "Room Capacity: ";
     cin >> tempRestaurant.capacity;
-    cin.ignore();
     cout << "Price: ";
     cin >> tempRestaurant.price;
-    cin.ignore();
     cout << "Opening Hour: ";
     cin >> tempRestaurant.openHours;
     cout << "Closing Hour: ";
