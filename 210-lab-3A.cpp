@@ -7,6 +7,7 @@
 // MILESTONE 2: completed program w/the two working funcitons.
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -21,17 +22,32 @@ struct Restaurant {
 
 };
 
-Restaurant restaurantInfo();
-void outputRestaurant(const Restaurant& res);
+Restaurant restaurantInfo(); //prototype.
+void outputRestaurant(const Restaurant& res); //prototype.
 
 int main() {
     
-    Restaurant r = {"Pear Bistro", "2200 Pear St.", 40, 10.00, 7.00, 20.00};
-    cout << "Name: " << r.name << endl;
-    cout << "Address: " << r.address << endl;
-    cout << "Room Capacity: " << r.capacity << endl;
-    cout << "Lowest Price: " << r.price << endl;
-    cout << "Hours of Operation: " << r.openHours << " - " << r.closedHours << endl;
-    return 0;
+    // Restaurant r = {"Pear Bistro", "2200 Pear St.", 40, 10.00, 7.00, 20.00};
+    // cout << "Name: " << r.name << endl;
+    // cout << "Address: " << r.address << endl;
+    // cout << "Room Capacity: " << r.capacity << endl;
+    // cout << "Lowest Price: " << r.price << endl;
+    // cout << "Hours of Operation: " << r.openHours << " - " << r.closedHours << endl;
+    // return 0;
 }
 
+Restaurant restaurantInfo(){
+    Restaurant tempRestaurant; //this is the temprary struct
+    cout << "Restaurant name: ";
+    cin >> tempRestaurant.name;
+    cout << "Restaurant Address: ";
+    cin >> tempRestaurant.address;
+    cout << "Room Capacity: ";
+    cin >> tempRestaurant.capacity;
+    cout << "Price: ";
+    cin >> tempRestaurant.price;
+    cout << "Hours of Operation: ";
+    cin >> tempRestaurant.openHours >> tempRestaurant.closedHours;
+    return tempRestaurant;
+
+}
