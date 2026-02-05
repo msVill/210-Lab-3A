@@ -39,15 +39,19 @@ int main() {
 Restaurant restaurantInfo(){
     Restaurant tempRestaurant; //this is the temprary struct
     cout << "Restaurant name: ";
-    cin >> tempRestaurant.name;
+    getline(cin, tempRestaurant.name);
     cout << "Restaurant Address: ";
-    cin >> tempRestaurant.address;
+    getline(cin, tempRestaurant.address);
     cout << "Room Capacity: ";
     cin >> tempRestaurant.capacity;
+    cin.ignore();
     cout << "Price: ";
     cin >> tempRestaurant.price;
-    cout << "Hours of Operation: ";
-    cin >> tempRestaurant.openHours >> tempRestaurant.closedHours;
+    cin.ignore();
+    cout << "Opening Hour: ";
+    cin >> tempRestaurant.openHours;
+    cout << "Closing Hour: ";
+    cin >> tempRestaurant.closedHours;
     return tempRestaurant;
 
 }
