@@ -19,7 +19,6 @@ struct Restaurant {
 
 };
 
-
 int main() {
     Restaurant restaurantInfo = {"Pear Bistro", "22 Pear Street", 60, 13.00, 7.00, 20.00};
     return 0;
