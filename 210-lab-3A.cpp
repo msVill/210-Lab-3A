@@ -14,15 +14,24 @@ struct Restaurant {
     
     string name, address;
     int capacity;
-    double price, openHours, closedHours;
+    float price;
+    float openHours;
+    float closedHours;
     
 
 };
 
+Restaurant restaurantInfo();
+void outputRestaurant(const Restaurant& res);
+
 int main() {
-    Restaurant restaurantInfo = {"Pear Bistro", "22 Pear Street", 60, 13.00, 7.00, 20.00};
-    return 0;
-    cout << "Restaurant Information: " << restaurantInfo << endl;
+    
+    Restaurant r = {"Pear Bistro", "2200 Pear St.", 40, 10.00, 7.00, 20.00};
+    cout << "Name: " << r.name << endl;
+    cout << "Address: " << r.address << endl;
+    cout << "Room Capacity: " << r.capacity << endl;
+    cout << "Lowest Price: " << r.price << endl;
+    cout << "Hours of Operation: " << r.openHours << " - " << r.closedHours << endl;
     return 0;
 }
 
