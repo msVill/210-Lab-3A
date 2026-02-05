@@ -19,16 +19,11 @@ struct Restaurant {
 
 };
 
-// void restaurantInfo(const Restaurant& tempRest){
-//     cout << "Enter the Restaurant name:" << tempRest.name << "\n";
-//     cout << "Enter the address:" << tempRest.address << "\n";
-//     cout << "Enter Open Hours:" << tempRest.openhours << "\n";
-//     cout << "Enter Closed Hours:" << tempRest.closedHours << "\n";
-//     cout << "Enter price of meal:" << tempRest.price << endl;
-
-// }
 
 int main() {
-    Restaurant food = {"Pear Bistro", "22 Pear Street", 60, 13.00, 7.00, 20.00};
+    Restaurant restaurantInfo = {"Pear Bistro", "22 Pear Street", 60, 13.00, 7.00, 20.00};
+    return 0;
+    cout << "Restaurant Information: " << restaurantInfo << endl;
     return 0;
 }
+
