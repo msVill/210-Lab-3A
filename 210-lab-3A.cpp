@@ -17,39 +17,52 @@ struct Restaurant {
     int capacity;
     float price;
     float openHours;
-    float closedHours;
+    double closedHours;
     
 
 };
 
-Restaurant restaurantInfo(); //prototype.
-void outputRestaurant(const Restaurant& res); //prototype.
+Restaurant restaurantInfo(); //prototype. Function #1
+void outputRestaurantInfo(const Restaurant& res); //prototype. Function #2
 
 int main() {
-    
-    // Restaurant r = {"Pear Bistro", "2200 Pear St.", 40, 10.00, 7.00, 20.00};
-    // cout << "Name: " << r.name << endl;
-    // cout << "Address: " << r.address << endl;
-    // cout << "Room Capacity: " << r.capacity << endl;
-    // cout << "Lowest Price: " << r.price << endl;
-    // cout << "Hours of Operation: " << r.openHours << " - " << r.closedHours << endl;
-    // return 0;
-}
+    Restaurant myRestaurant = restaurantInfo(); // struct Restaurant object named myRestaurant.
+    // Receives temp. struct created in Function #1.
 
-Restaurant restaurantInfo(){
+    cout << "\n--- Restaurant Info ---\n";
+    outputRestaurantInfo(myRestaurant);
+
+    return 0;
+}
+Restaurant restaurantInfo() {
+
     Restaurant tempRestaurant; //this is the temprary struct
+
     cout << "Restaurant name: ";
-    getline(cin, tempRestaurant.name);
+    getline(cin, tempRestaurant.name); //using getline() to read whole string. X white spaces.
+
     cout << "Restaurant Address: ";
     getline(cin, tempRestaurant.address);
+
     cout << "Room Capacity: ";
-    cin >> tempRestaurant.capacity;
+    cin >> tempRestaurant.capacity; // using cin because it works with ints, etc. but not strings.
+
     cout << "Price: ";
     cin >> tempRestaurant.price;
+
     cout << "Opening Hour: ";
     cin >> tempRestaurant.openHours;
+
     cout << "Closing Hour: ";
     cin >> tempRestaurant.closedHours;
-    return tempRestaurant;
 
+    return tempRestaurant;
+}
+
+void outputRestaurantInfo(const Restaurant& res) {
+    cout << "Name: " << res.name << endl;
+    cout << "Address: " << res.address << endl;
+    cout << "Capacity: " << res.capacity;
+    cout << "Price: " << res.price;
+    cout << "Hours: " << res.openHours << " - " << res.closedHours << endl;
 }
