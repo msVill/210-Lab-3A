@@ -1,21 +1,20 @@
 // Testing: create min. 4 struct objs. - use functions's to manipulate data.
+// Have to use Vectors
 // MILESTONE 2: completed program w/the two working funcitons.
 
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 struct Restaurant {
-    
     string name, address;
     int capacity;
     float price;
     float openHours;
     float closedHours;
-    
-
 };
 
 Restaurant restaurantInfo(); //prototype. Function #1
@@ -24,7 +23,9 @@ void outputRestaurantInfo(const Restaurant& res); //prototype. Function #2
 int main() {
     Restaurant myRestaurant = restaurantInfo(); // struct Restaurant object named myRestaurant.
     // Receives temp. struct created in Function #1.
-
+    
+    Restaurant myRestaurant2 = restaurantInfo();
+   
     cout << "\n--- Restaurant Info ---\n";
     outputRestaurantInfo(myRestaurant);
 
