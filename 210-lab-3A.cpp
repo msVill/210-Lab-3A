@@ -24,8 +24,10 @@ int main() {
     Restaurant myRestaurant = restaurantInfo(); // struct Restaurant object named myRestaurant.
     // Receives temp. struct created in Function #1.
     
-    Restaurant myRestaurant2 = restaurantInfo();
-   
+    // Restaurant myRestaurant2 = restaurantInfo();
+    vector<Restaurant> restaurants;
+    restaurants.push_back(restaurantInfo());
+
     cout << "\n--- Restaurant Info ---\n";
     outputRestaurantInfo(myRestaurant);
 
