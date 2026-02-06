@@ -1,12 +1,8 @@
-// prog. needs to manipulate data about restaurants - use struct vars.
-// needs 5 attributes/data members.
-// Function 1 - creates a temp. struct - gets input from user(? - confirmed) - returns struct to main().
-// MILESTONE 1: function works - code compiles - creates 1 restaurant struct obj. for testing.
-// Function 2 - gets struct obj . as formal parameter - outputs the data - (return type: void).
 // Testing: create min. 4 struct objs. - use functions's to manipulate data.
 // MILESTONE 2: completed program w/the two working funcitons.
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 using namespace std;
@@ -17,7 +13,7 @@ struct Restaurant {
     int capacity;
     float price;
     float openHours;
-    double closedHours;
+    float closedHours;
     
 
 };
@@ -62,7 +58,10 @@ Restaurant restaurantInfo() {
 void outputRestaurantInfo(const Restaurant& res) {
     cout << "Name: " << res.name << endl;
     cout << "Address: " << res.address << endl;
-    cout << "Capacity: " << res.capacity;
-    cout << "Price: " << res.price;
+    cout << "Capacity: " << res.capacity << endl;
+
+    cout << fixed << setprecision(2); 
+    cout << "Price: $ " << res.price << endl;
     cout << "Hours: " << res.openHours << " - " << res.closedHours << endl;
+    cout << endl;
 }
