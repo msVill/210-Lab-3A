@@ -26,21 +26,26 @@ int main() {
     
     vector<Restaurant> restaurants;
 
-    for(int i = 1; i < 4; i++) { // for-loop for struct obj. creation.
+    for(int i = 1; i <= 4; i++) { // for-loop for struct obj. creation.
         Restaurant temp = inputRestaurantInfo(); // temp. object variable of type Restaurant receives method per loop.
         restaurants.push_back(temp); // using vector variable to receive the temp. struct objects created per loop.
     }
 
-    cout << "\n--- Restaurant Info ---\n";
-    outputRestaurantInfo(temp);
+    for(Restaurant r : restaurants) {
+    cout << "_____________________________________\n";
+    cout << "\n--- Restaurant Info ---\n\n";
+    outputRestaurantInfo(r);
     // I thought I could use the temp. variable and pass it to the output function, but it does not accept it.
+    }
 
     return 0;
 }
 
-Restaurant intputRestaurantInfo() {
+Restaurant inputRestaurantInfo() {
 
     Restaurant tempRestaurant; //this is the temprary struct
+
+    cout << "\n--- ENTER RESTAURANT INFO ---\n\n";
 
     cout << "Restaurant name: ";
     getline(cin, tempRestaurant.name); //using getline() to read whole string. X white spaces.
@@ -53,23 +58,26 @@ Restaurant intputRestaurantInfo() {
 
     cout << "Price: ";
     cin >> tempRestaurant.price;
+    cin.ignore();
 
     cout << "Opening Hour: ";
     cin >> tempRestaurant.openHours;
 
     cout << "Closing Hour: ";
     cin >> tempRestaurant.closedHours;
+    cin.ignore();
 
     return tempRestaurant;
 }
 
-void outputRestaurantInfo(const Restaurant& res) {
-    cout << "Name: " << res.name << endl;
-    cout << "Address: " << res.address << endl;
-    cout << "Capacity: " << res.capacity << endl;
+void outputRestaurantInfo(const Restaurant& r) {
+    cout << "Name: " << r.name << endl;
+    cout << "Address: " << r.address << endl;
+    cout << "Capacity: " << r.capacity << endl;
 
     cout << fixed << setprecision(2); 
-    cout << "Price: $ " << res.price << endl;
-    cout << "Hours: " << res.openHours << " - " << res.closedHours << endl;
+    cout << "Price: $ " << r.price << endl;
+    cout << "Hours: " << r.openHours << " - " << r.closedHours << endl;
     cout << endl;
 }
+
