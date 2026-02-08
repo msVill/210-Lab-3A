@@ -17,23 +17,28 @@ struct Restaurant {
     float closedHours;
 };
 
-Restaurant restaurantInfo(); //prototype. Function #1
+Restaurant inputRestaurantInfo(); //prototype. Function #1
 void outputRestaurantInfo(const Restaurant& res); //prototype. Function #2
 
 int main() {
-    Restaurant myRestaurant = restaurantInfo(); // struct Restaurant object named myRestaurant.
+    // Restaurant myRestaurant = restaurantInfo(); // struct Restaurant object named myRestaurant.
     // Receives temp. struct created in Function #1.
     
-    // Restaurant myRestaurant2 = restaurantInfo();
     vector<Restaurant> restaurants;
-    restaurants.push_back(restaurantInfo());
+
+    for(int i = 1; i < 4; i++) { // for-loop for struct obj. creation.
+        Restaurant temp = inputRestaurantInfo(); // temp. object variable of type Restaurant receives method per loop.
+        restaurants.push_back(temp); // using vector variable to receive the temp. struct objects created per loop.
+    }
 
     cout << "\n--- Restaurant Info ---\n";
-    outputRestaurantInfo(myRestaurant);
+    outputRestaurantInfo(temp);
+    // I thought I could use the temp. variable and pass it to the output function, but it does not accept it.
 
     return 0;
 }
-Restaurant restaurantInfo() {
+
+Restaurant intputRestaurantInfo() {
 
     Restaurant tempRestaurant; //this is the temprary struct
 
